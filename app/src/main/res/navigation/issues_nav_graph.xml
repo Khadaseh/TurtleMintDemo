@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/issues_nav_graph"
+    app:startDestination="@id/issuesFragment">
+
+    <fragment
+        android:id="@+id/issuesFragment"
+        android:name="com.turtlemint.turtlemintproject.view.ui.issue.IssuesFragment"
+        android:label="fragment_breaking_news"
+        tools:layout="@layout/fragment_issues" >
+<!--        action for navigating from one fragment to another fragment-->
+        <action
+            android:id="@+id/action_IssuesFragment_to_issueDetailsFragment"
+            app:destination="@id/issueDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/issueDetailsFragment"
+        android:name="com.turtlemint.turtlemintproject.view.ui.issuedetail.IssueDetailsFragment"
+        android:label="fragment_issue"
+        tools:layout="@layout/fragment_issueinfo" >
+        <argument
+            android:name="issue"
+            app:argType="com.turtlemint.turtlemintproject.view.data.model.Issue" />
+    </fragment>
+</navigation>

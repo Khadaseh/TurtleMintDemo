@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="3dp"
+    tools:context="com.turtlemint.turtlemintproject.view.ui.issuedetail.IssueDetailsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+<!-- for avatar id-->
+            <ImageView
+                android:id="@+id/ivAvatar"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:scaleType="centerInside" />
+<!-- for title-->
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:ellipsize="end"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+<!--for created date-->
+        <TextView
+            android:id="@+id/tvPublishedAt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/black" />
+<!--for description -->
+        <TextView
+            android:id="@+id/tvBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/black" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
